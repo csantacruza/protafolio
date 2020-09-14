@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    font-family: 'Amatic SC';
+    color: #34495e;
+}
+
+p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    word-spacing: 2px;
+    line-height: 1.4rem;
+    color: #737171;
+}
+
+body {
+    font-family: 'Helvetica';
+    color: #737171;
+    background: #f3f3f3;
+}
+
+.container {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #34495e;
+}
+
+
+a:hover {
+    color: #f08c79;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    max-width: 1000rem;
+    height: 750px;
+    background: #737171;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(10, 80%, 71%, 0.61), hsla(210, 29%, 29%, 0.61)), url(../img/blog\ header.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(10, 80%, 71%, 0.61), hsla(210, 29%, 29%, 0.61)), url(../img/blog\ header.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 100;
+}
+
+.container-nav {
+    padding: 30px 70px 30px 70px;
+    background: hsla(0, 0%, 100%, 0.603);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    color: #34495e;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.3s linear;
+    font-family: 'Amatic SC';
+    font-size: 1.9rem;
+}
+
+.navigation ul li a:hover {
+    color: #f08c79;
+}
+
+.logo,
+.logo:hover {
+    color: #737171;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 3.5rem;
+    font-family: 'Amatic SC';
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+
+    .navigation ul {
+        display: none;
+    }
+
+    .navigation ul.show {
+        display: block;
+    }
+
+    .navigation {
+        width: 100%;
+        margin: 1rem;
+    }
+
+    .container-nav {
+        background: hsla(0, 0%, 100%, 0.603);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 200;
+    }
+
+    .navigation ul li {
+        display: block;
+    }
+
+    .navigation ul li a {
+        color: #34495e;
+        display: block;
+        padding: 0.5rem 0;
+        text-decoration: none;
+        transition: all 0.3s linear;
+    }
+
+    .navigation ul li a:hover {
+        color: #f08c79;
+    }
+
+}
+
+
+header .text-header {
+    padding: 0 0 0 60px;
+    display: flex;
+    height: 530px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-header h1 {
+    font-size: 88px;
+    color: #fff;
+}
+
+.text-header h2 {
+    font-size: 35px;
+    color: #fff;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Posts */
+
+.divider{
+    height: 40px;
+    background:#f3f3f3;
+    width: 100%;
+}
+
+
+
+.card{
+    padding: 0 0 60px 0;
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    overflow: hidden;
+    background:#fff;
+}
+
+@media only screen and (max-width: 767px) {
+.card{
+    
+    padding: 0 0 60px 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    background:#fff;
+}
+}
+
+.card h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    font-weight: 200;
+  
+}
+.card .image-with-hover{
+    position: relative;
+}
+
+.card img{
+    display: block;
+    width: 100%;
+     object-fit: cover; 
+     background-size: cover;
+    transition: all 1s ease-out;
+
+}
+
+.card .img-hover{
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background:  hsla(0, 0%, 100%, 0.61);
+    opacity: 0;
+}
+.card .img-hover:hover{
+   opacity: 1;
+}
+
+
+.card .content{
+/* padding: 0 60px 0, 60px; */
+margin:  1.4rem 45px 0 45px;
+}
+
+.date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date-container span {
+    background: #f08c79;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 2px 2px;
+    margin: 10px;
+}
+
+.date-container h2 {
+    display: inline-block;
+    
+}
+
+
+/* Footer */
+
+footer {
+    background: #f3f3f3;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+footer h1 {
+    font-size: 1.3rem;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
