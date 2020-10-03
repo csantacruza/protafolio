@@ -200,7 +200,7 @@ header .text-header {
 /* Posts */
 
 .divider{
-    height: 40px;
+    height: 80px;
     background:#f3f3f3;
     width: 100%;
 }
@@ -241,18 +241,21 @@ header .text-header {
 }
 .card .image-with-hover{
     position: relative;
+    overflow: hidden;
 }
 
 .card img{
     display: block;
     width: 100%;
-     object-fit: cover; 
-     background-size: cover;
-    transition: all 1s ease-out;
-
+    object-fit: cover; 
+    background-size: cover;
+    transition: transform 1s ease;
+}
+.card .image-with-hover > img:hover{
+    transform: scale(1.2);
 }
 
-.card .img-hover{
+/* .card .img-hover{
     overflow: hidden;
     position: absolute;
     top:0;
@@ -263,7 +266,7 @@ header .text-header {
 }
 .card .img-hover:hover{
    opacity: 1;
-}
+} */
 
 
 .card .content{
@@ -291,6 +294,28 @@ margin:  1.4rem 45px 0 45px;
     display: inline-block;
     
 }
+.reference-simple{
+    position: relative;
+}
+
+.reference-simple h2{
+    display: inline-block;
+    color: #f08c79;
+    padding-bottom: 80px;
+    margin-left: 30px;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.line-reference-simple{
+    margin-top:50px;
+    margin-left: 15%;
+    display: inline-block;
+    width: 4px;
+    height: 100px;
+    background-color: #f08c79;
+}
+
 
 
 /* Footer */
